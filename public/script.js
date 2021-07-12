@@ -9,7 +9,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/', 
-    port: '443'
+    port: '3030'
 }); 
 
 navigator.mediaDevices.getUserMedia({
@@ -128,5 +128,5 @@ const muteUnmute = () => {
 
   function leaveMeeting(){
     var url = window.location.href;
-    document.getElementsByTagName("html")[0].innerHTML = "<div href=url><a>Click to rejoin      meeting</a></div>"
+    document.getElementsByTagName("html")[0].innerHTML = "<div ><a href=url >Click to rejoin meeting</a></div>"
   }
