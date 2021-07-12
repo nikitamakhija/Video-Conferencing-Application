@@ -1,3 +1,4 @@
+
 const socket = io('/');
 
 const videoGrid = document.getElementById('video-grid')
@@ -18,7 +19,6 @@ navigator.mediaDevices.getUserMedia({
 }).then(stream => {
     myVideoStream = stream;
     addVideoStream(myVideo, stream);
-
     peer.on('call', call => {
         call.answer(stream)
         const video = document.createElement('video')
@@ -44,7 +44,7 @@ navigator.mediaDevices.getUserMedia({
         $('.messages').append(`<li class="message"><b>user</b><br/>${message}</li>`);
         scrollToBottom()
     })
-
+    
 })
 
 peer.on('open', id => {
@@ -128,5 +128,7 @@ const muteUnmute = () => {
 
   function leaveMeeting(){
     var url = window.location.href;
-    document.getElementsByTagName("html")[0].innerHTML = "<div ><a href=url >Click to rejoin meeting</a></div>"
+  document.getElementsByTagName("html")[0].innerHTML = "<div id = 'byebye'> <a href="+url+" >Click to rejoin meeting</a> </div>"
   }
+
+  
