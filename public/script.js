@@ -1,4 +1,3 @@
-
 const socket = io('/');
 
 const videoGrid = document.getElementById('video-grid')
@@ -125,4 +124,9 @@ const muteUnmute = () => {
       <span>Play Video</span>
     `
     document.querySelector('.main__video_button').innerHTML = html;
+  }
+
+  function leaveMeeting(){
+    var url = window.location.href;
+    document.getElementsByTagName("html")[0].innerHTML = "<div href=url><a>Click to rejoin      meeting</a></div>"
   }
